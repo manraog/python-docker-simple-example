@@ -6,8 +6,9 @@ app = Flask(__name__)
 def hello():
     print("Ok")
     x = 0.0001
-    for i in range(1000000):
+    for i in range(10000000):
         x = math.sqrt(x)
+        x = x*x
     return "Load"    
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=int("5000"), debug=True)
